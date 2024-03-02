@@ -25,13 +25,13 @@ const About = () => {
         width: "280px",
         height: "280px",
         marginLeft: "20px",
-        borderRadius: "50%", // Make the image circular
+        borderRadius: "50%",
     };
 
     const valuesContainerStyle = {
         display: "flex",
-        alignItems: "center", // Align items vertically at the center
-        justifyContent: "space-between", // Spread content to use the available space
+        alignItems: "center",
+        justifyContent: "space-between",
     };
 
     return (
@@ -47,7 +47,7 @@ const About = () => {
                         width: "280px",
                         height: "280px",
                         marginRight: "20px",
-                        borderRadius: "50%", // Make the image circular
+                        borderRadius: "50%",
                     }}
                 />
                 <div
