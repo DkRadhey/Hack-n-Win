@@ -1,6 +1,11 @@
 import React from "react";
 
 const LectureHalls = () => {
+    // const cardData = {[
+    //     {"roomNo": "Block D2 Room No. 201"},
+    //     {"room":"Block D2 Room No. 201"}
+    // ]};
+
     return (
         <div class="container mx-auto" style={{ width: "60%" }}>
             <div class="row row-cols-2">
@@ -15,7 +20,7 @@ const LectureHalls = () => {
                         style={{ height: "8rem" }}
                     />
                     <div class="card-body">
-                        <p className="card-text">Block D2 Room No. 403</p>
+                        <p className="card-text">Block D2 Room No. 201</p>
                     </div>
                 </div>
                 <div
@@ -29,7 +34,7 @@ const LectureHalls = () => {
                         style={{ height: "8rem" }}
                     />
                     <div class="card-body">
-                        <p className="card-text">Block D2 Room No. 403</p>
+                        <p className="card-text">Block D2 Room No. 303</p>
                     </div>
                 </div>
                 <div
@@ -43,7 +48,7 @@ const LectureHalls = () => {
                         style={{ height: "8rem" }}
                     />
                     <div class="card-body">
-                        <p className="card-text">Block D2 Room No. 403</p>
+                        <p className="card-text">Block D2 Room No. 103</p>
                     </div>
                 </div>
                 <div
@@ -57,7 +62,7 @@ const LectureHalls = () => {
                         style={{ height: "8rem" }}
                     />
                     <div class="card-body">
-                        <p className="card-text">Block D2 Room No. 403</p>
+                        <p className="card-text">Block D2 Room No. 505</p>
                     </div>
                 </div>
                 <div
@@ -71,7 +76,7 @@ const LectureHalls = () => {
                         style={{ height: "8rem" }}
                     />
                     <div class="card-body">
-                        <p className="card-text">Block D2 Room No. 403</p>
+                        <p className="card-text">Block D1 Room No. 306</p>
                     </div>
                 </div>
                 <div
@@ -85,7 +90,7 @@ const LectureHalls = () => {
                         style={{ height: "8rem" }}
                     />
                     <div class="card-body">
-                        <p className="card-text">Block D2 Room No. 403</p>
+                        <p className="card-text">Block D2 Room No. 105</p>
                     </div>
                 </div>
                 <div
@@ -99,7 +104,7 @@ const LectureHalls = () => {
                         style={{ height: "8rem" }}
                     />
                     <div class="card-body">
-                        <p className="card-text">Block D2 Room No. 403</p>
+                        <p className="card-text">Block D1 Room No. 501</p>
                     </div>
                 </div>
             </div>

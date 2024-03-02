@@ -1,6 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
+import logo from "../../assets/logo.png";
 
 const navbar = () => {
     return (
@@ -8,6 +9,16 @@ const navbar = () => {
             <nav className="navbar navbar-expand-lg d-flex justify-content-between">
                 <div className="container-fluid">
                     <NavLink className="navbar-brand" to="/">
+                        <img
+                            src={logo}
+                            alt="Logo"
+                            style={{
+                                width: "62px",
+                                height: "62px",
+                                position: "relative",
+                                top: "-6px",
+                            }}
+                        />
                         EduPlex
                     </NavLink>
                     <div className="collapse navbar-collapse" id="navbarNav">

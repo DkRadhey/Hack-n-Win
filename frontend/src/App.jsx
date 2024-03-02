@@ -6,6 +6,7 @@ import Background from "./components/background/Background";
 import Teacher from "./components/pages/Teacher";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import LectureHalls from "./components/pages/LectureHalls";
+import About from "./components/pages/About";
 
 function App() {
     return (
@@ -22,6 +23,7 @@ function App() {
                         path="/lecturehalls"
                         element={<LectureHalls />}
                     ></Route>
+                    <Route exact path="/about" element={<About />}></Route>
                 </Routes>
             </Router>
         </>
