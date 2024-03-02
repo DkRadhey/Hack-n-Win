@@ -1,6 +1,7 @@
 import React from "react";
 import Venues from "./components/home_cards/Venues";
 import Teachers from "./components/home_cards/Teachers";
+import { NavLink } from "react-router-dom";
 
 const Home = () => {
     const optionsStyle = {
@@ -15,8 +16,12 @@ const Home = () => {
                 className="options d-flex justify-content-evenly mx-auto"
                 style={optionsStyle}
             >
-                <Venues />
-                <Teachers />
+                <NavLink to="/venues">
+                    <Venues />
+                </NavLink>
+                <NavLink to="/teachers">
+                    <Teachers />
+                </NavLink>
             </div>
         </div>
     );

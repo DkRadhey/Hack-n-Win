@@ -1,45 +1,35 @@
 import React from "react";
 import "./Navbar.css";
+import { NavLink } from "react-router-dom";
 
 const navbar = () => {
     return (
         <div>
             <nav className="navbar navbar-expand-lg d-flex justify-content-between">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#">
+                    <NavLink className="navbar-brand" to="/">
                         EduPlex
-                    </a>
-                    {/* <button
-                        className="navbar-toggler"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarNav"
-                        aria-controls="navbarNav"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
-                    >
-                        <span className="navbar-toggler-icon"></span>
-                    </button> */}
+                    </NavLink>
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav mx-auto">
                             <li className="nav-item">
-                                <a
+                                <NavLink
                                     className="nav-link active"
                                     aria-current="page"
-                                    href="#"
+                                    to="/"
                                 >
                                     Home
-                                </a>
+                                </NavLink>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">
+                                <NavLink className="nav-link" to="/about">
                                     About
-                                </a>
+                                </NavLink>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">
+                                <NavLink className="nav-link" to="/contact-us">
                                     Contact Us
-                                </a>
+                                </NavLink>
                             </li>
                         </ul>
                     </div>
