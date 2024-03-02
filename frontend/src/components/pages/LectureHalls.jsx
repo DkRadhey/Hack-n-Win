@@ -4,7 +4,7 @@ import axios from "axios";
 
 const LectureHalls = () => {
     const [finalData, setFinalData] = useState([]);
-    const weekday = monday;
+    const weekday = "monday";
     const slot = 5;
     useEffect(() => {
         axios
