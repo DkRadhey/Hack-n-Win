@@ -12,7 +12,12 @@ const Venues = () => {
                     style={{ height: "18rem" }}
                 />
                 <div class="card-body">
-                    <p className="card-text">Venues</p>
+                    <p
+                        className="card-text"
+                        style={{ font: "400 18px Krona One" }}
+                    >
+                        Venues
+                    </p>
                 </div>
             </div>
         </div>

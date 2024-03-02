@@ -12,7 +12,12 @@ const Teachers = () => {
                     style={{ height: "18rem" }}
                 />
                 <div class="card-body">
-                    <p className="card-text">Teachers</p>
+                    <p
+                        className="card-text"
+                        style={{ font: "400 18px Krona One" }}
+                    >
+                        Teachers
+                    </p>
                 </div>
             </div>
         </div>

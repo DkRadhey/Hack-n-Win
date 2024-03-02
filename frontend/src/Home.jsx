@@ -16,10 +16,23 @@ const Home = () => {
                 className="options d-flex justify-content-evenly mx-auto"
                 style={optionsStyle}
             >
-                <NavLink to="/venues">
+                <NavLink
+                    to="/venues"
+                    style={{
+                        "text-decoration": "none",
+                        border: "none",
+                        font: "400 18px Krona One",
+                    }}
+                >
                     <Venues />
                 </NavLink>
-                <NavLink to="/teachers">
+                <NavLink
+                    to="/teachers"
+                    style={{
+                        "text-decoration": "none",
+                        border: "none",
+                    }}
+                >
                     <Teachers />
                 </NavLink>
             </div>

@@ -1,3 +1,7 @@
 .card:hover {
     cursor: pointer;
 }
+
+.card {
+    font: 400 18px "Krona One";
+}
