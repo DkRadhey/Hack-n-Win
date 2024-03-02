@@ -1,3 +1,6 @@
+.ring {
+    z-index: -999;
+}
 .ring-1 {
     position: absolute;
     top: -177px;
