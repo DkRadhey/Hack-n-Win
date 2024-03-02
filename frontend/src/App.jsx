@@ -22,8 +22,6 @@ function App() {
                         path="/lecturehalls"
                         element={<LectureHalls />}
                     ></Route>
-                    {/* <Route exact path="/labs" element={< />}></Route>
-                    <Route exact path="/lecturehalls" element={<LectureHalls />}></Route> */}
                 </Routes>
             </Router>
         </>

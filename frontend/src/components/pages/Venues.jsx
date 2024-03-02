@@ -11,13 +11,31 @@ const Venues = () => {
 
     return (
         <div className="d-flex justify-content-evenly" style={venueStyle}>
-            <NavLink to="/lecturehalls">
+            <NavLink
+                to="/lecturehalls"
+                style={{
+                    "text-decoration": "none",
+                    border: "none",
+                }}
+            >
                 <LectureHall />
             </NavLink>
-            <NavLink to="/labs">
+            <NavLink
+                to="/labs"
+                style={{
+                    "text-decoration": "none",
+                    border: "none",
+                }}
+            >
                 <Labs />
             </NavLink>
-            <NavLink to="/seminarhalls">
+            <NavLink
+                to="/seminarhalls"
+                style={{
+                    "text-decoration": "none",
+                    border: "none",
+                }}
+            >
                 <SeminarHalls />
             </NavLink>
         </div>
