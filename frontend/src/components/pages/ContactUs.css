@@ -1,0 +1,36 @@
+.heading {
+    text-align: center;
+    font: 400 36px Krona One;
+    color: var(--black);
+    text-transform: uppercase;
+    /* padding-bottom: 1rem; */
+}
+
+.contact form {
+    margin: 0.5rem auto;
+    max-width: 60%;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+}
+
+.contact form .box {
+    padding: 0.5rem 1rem;
+    width: 100%;
+    background: none;
+    color: var(--black);
+    font-size: 1rem;
+    text-transform: none;
+    margin: 0.5rem 0;
+    box-shadow: var(--box-shadow);
+    border-radius: 0.5rem;
+}
+
+.contact form textarea {
+    height: 10rem;
+    resize: none;
+}
+
+.contact form .box:focus {
+    box-shadow: var(--box-shadow-inset);
+}
