@@ -6,8 +6,10 @@ import Background from "./components/background/Background";
 import Teacher from "./components/pages/Teacher";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import LectureHalls from "./components/pages/LectureHalls";
+import SeminarHalls from "./components/pages/SeminarHalls";
 import About from "./components/pages/About";
 import ContactUs from "./components/pages/ContactUs";
+import Labs from "./components/pages/Labs";
 
 function App() {
     return (
@@ -23,6 +25,12 @@ function App() {
                         exact
                         path="/lecturehalls"
                         element={<LectureHalls />}
+                    ></Route>
+                    <Route exact path="/labs" element={<Labs />}></Route>
+                    <Route
+                        exact
+                        path="/seminarhalls"
+                        element={<SeminarHalls />}
                     ></Route>
                     <Route exact path="/about" element={<About />}></Route>
                     <Route
