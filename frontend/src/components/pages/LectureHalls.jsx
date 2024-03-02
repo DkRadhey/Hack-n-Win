@@ -1,114 +1,48 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import Card from "../Card/Card";
+import axios from "axios";
 
 const LectureHalls = () => {
-    // const cardData = {[
-    //     {"roomNo": "Block D2 Room No. 201"},
-    //     {"room":"Block D2 Room No. 201"}
-    // ]};
+    const [finalData, setFinalData] = useState([]);
+    const weekday = monday;
+    const slot = 5;
+    useEffect(() => {
+        axios
+            .get("/api/venues")
+            .then((response) => {
+                const data = response.data.data;
+                const lectureRooms = data.filter(
+                    (item) => item.category === "lecture hall"
+                );
+                const filteredData = lectureRooms.filter(
+                    (room) => room.schedule[weekday][slot] === "free"
+                );
+                setFinalData(filteredData);
+            })
+            .catch((error) => {
+                console.error("Error fetching data:", error);
+            });
+    }, []);
 
     return (
-        <div class="container mx-auto" style={{ width: "60%" }}>
-            <div class="row row-cols-2">
-                <div
-                    className="card col p-0 mx-4 my-4"
-                    style={{ width: "12rem" }}
-                >
-                    <img
-                        src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=600"
-                        className="card-img-top"
-                        alt="..."
-                        style={{ height: "8rem" }}
-                    />
-                    <div class="card-body">
-                        <p className="card-text">Block D2 Room No. 201</p>
+        <>
+            {finalData.length > 0 ? (
+                <div className="container mx-auto" style={{ width: "60%" }}>
+                    <h1 className="text-center"> Rooms Available </h1>
+                    <div className="justify-content-center row row-cols-2">
+                        {finalData.map((item) => (
+                            <Card
+                                key={item._id}
+                                room={item.roomNo}
+                                block={item.blockNo}
+                            />
+                        ))}
                     </div>
                 </div>
-                <div
-                    className="card col p-0 mx-4 my-4"
-                    style={{ width: "12rem" }}
-                >
-                    <img
-                        src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=600"
-                        className="card-img-top"
-                        alt="..."
-                        style={{ height: "8rem" }}
-                    />
-                    <div class="card-body">
-                        <p className="card-text">Block D2 Room No. 303</p>
-                    </div>
-                </div>
-                <div
-                    className="card col p-0 mx-4 my-4"
-                    style={{ width: "12rem" }}
-                >
-                    <img
-                        src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=600"
-                        className="card-img-top"
-                        alt="..."
-                        style={{ height: "8rem" }}
-                    />
-                    <div class="card-body">
-                        <p className="card-text">Block D2 Room No. 103</p>
-                    </div>
-                </div>
-                <div
-                    className="card col p-0 mx-4 my-4"
-                    style={{ width: "12rem" }}
-                >
-                    <img
-                        src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=600"
-                        className="card-img-top"
-                        alt="..."
-                        style={{ height: "8rem" }}
-                    />
-                    <div class="card-body">
-                        <p className="card-text">Block D2 Room No. 505</p>
-                    </div>
-                </div>
-                <div
-                    className="card col p-0 mx-4 my-4"
-                    style={{ width: "12rem" }}
-                >
-                    <img
-                        src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=600"
-                        className="card-img-top"
-                        alt="..."
-                        style={{ height: "8rem" }}
-                    />
-                    <div class="card-body">
-                        <p className="card-text">Block D1 Room No. 306</p>
-                    </div>
-                </div>
-                <div
-                    className="card col p-0 mx-4 my-4"
-                    style={{ width: "12rem" }}
-                >
-                    <img
-                        src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=600"
-                        className="card-img-top"
-                        alt="..."
-                        style={{ height: "8rem" }}
-                    />
-                    <div class="card-body">
-                        <p className="card-text">Block D2 Room No. 105</p>
-                    </div>
-                </div>
-                <div
-                    className="card col p-0 mx-4 my-4"
-                    style={{ width: "12rem" }}
-                >
-                    <img
-                        src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=600"
-                        className="card-img-top"
-                        alt="..."
-                        style={{ height: "8rem" }}
-                    />
-                    <div class="card-body">
-                        <p className="card-text">Block D1 Room No. 501</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+            ) : (
+                <p>No free lecture halls available</p>
+            )}
+        </>
     );
 };
 
