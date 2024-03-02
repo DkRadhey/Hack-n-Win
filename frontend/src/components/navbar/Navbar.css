@@ -1,0 +1,18 @@
+.navbar {
+    background-color: black;
+}
+
+.navbar-brand {
+    font: 400 28px "Krona One";
+    color: #fff !important;
+}
+
+.navbar-nav {
+    font: 400 18px "Roboto";
+    position: relative;
+    left: -115px;
+}
+
+.nav-link {
+    color: #fff !important;
+}
