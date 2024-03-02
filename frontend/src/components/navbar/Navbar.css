@@ -1,10 +1,10 @@
 .navbar {
-    background-color: black;
+    /* background-color: black; */
 }
 
 .navbar-brand {
     font: 400 28px "Krona One";
-    color: #fff !important;
+    /* color: #fff !important; */
 }
 
 .navbar-nav {

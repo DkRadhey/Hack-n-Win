@@ -1,0 +1,26 @@
+.ring-1 {
+    position: absolute;
+    top: -177px;
+    left: -95px;
+}
+
+.ring-2 {
+    position: absolute;
+    top: 15%;
+    left: 43%;
+}
+.ring-3 {
+    position: absolute;
+    top: -70%;
+    right: -30%;
+}
+.ring-4 {
+    position: absolute;
+    top: 70%;
+    left: 20%;
+}
+.ring-5 {
+    position: absolute;
+    bottom: -90%;
+    right: 40px;
+}

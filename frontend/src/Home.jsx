@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./components/navbar/navbar";
 import Venues from "./components/home_cards/Venues";
 import Teachers from "./components/home_cards/Teachers";
+import Background from "./components/background/Background";
 
 const Home = () => {
     const optionsStyle = {
@@ -13,6 +14,7 @@ const Home = () => {
     return (
         <div className="">
             <Navbar />
+            <Background />
             <div
                 className="options d-flex justify-content-evenly mx-auto"
                 style={optionsStyle}
