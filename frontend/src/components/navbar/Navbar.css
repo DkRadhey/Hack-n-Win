@@ -42,3 +42,19 @@
     opacity: 1;
     cursor: pointer;
 }
+
+.login {
+    font: 600 20px "Roboto";
+    color: #5f6161 !important;
+    text-decoration: none;
+    border: 2px solid #009381;
+    padding: 4px 18px;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+}
+
+.login:hover {
+    cursor: pointer;
+    background-color: #15a493;
+    color: #fff !important;
+}

@@ -43,6 +43,11 @@ const navbar = () => {
                                 </NavLink>
                             </li>
                         </ul>
+                        <span className="nav-item">
+                            <NavLink className="login" to="/login">
+                                Login
+                            </NavLink>
+                        </span>
                     </div>
                 </div>
             </nav>

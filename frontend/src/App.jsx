@@ -10,6 +10,7 @@ import SeminarHalls from "./components/pages/SeminarHalls";
 import About from "./components/pages/About";
 import ContactUs from "./components/pages/ContactUs";
 import Labs from "./components/pages/Labs";
+import Login from "./components/login/Login";
 
 function App() {
     return (
@@ -38,6 +39,7 @@ function App() {
                         path="/contact-us"
                         element={<ContactUs />}
                     ></Route>
+                    <Route exact path="/login" element={<Login />}></Route>
                 </Routes>
             </Router>
         </>
