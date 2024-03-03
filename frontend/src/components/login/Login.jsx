@@ -1,7 +1,20 @@
 import React from "react";
 import "./Login.css";
+import { useNavigate } from "react-router-dom";
 
-const Login = () => {
+const Login = ({ isLoggedIn }) => {
+    const history = useNavigate();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Add your authentication logic here
+
+        // For demonstration purposes, always consider the login as successful
+        // onLogin();
+        isLoggedIn = true;
+        history.push("/home");
+    };
+
     return (
         <div>
             <section class="vh-100">
@@ -63,11 +76,13 @@ const Login = () => {
 
                                 <div class="text-center text-lg-start mt-4 pt-2">
                                     <button
+                                        type="submit"
                                         class="btn btn-primary btn-lg"
                                         style={{
                                             "padding-left": "2.5rem",
                                             "padding-right": "2.5rem",
                                         }}
+                                        onClick={handleSubmit}
                                     >
                                         Login
                                     </button>

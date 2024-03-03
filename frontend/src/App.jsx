@@ -1,4 +1,5 @@
 import "./App.css";
+import React, { useState } from "react";
 import Home from "./Home";
 import Venues from "./components/pages/Venues";
 import Navbar from "./components/navbar/navbar";
@@ -13,10 +14,18 @@ import Labs from "./components/pages/Labs";
 import Login from "./components/login/Login";
 
 function App() {
+    const [isLoggedIn, setLoggedIn] = useState(false);
+    const handleLogin = () => {
+        setLoggedIn(true);
+    };
+
+    // const handleLogout = () => {
+    //     setLoggedIn(false);
+    // };
     return (
         <>
             <Router>
-                <Navbar />
+                <Navbar isLoggedIn={isLoggedIn} />
                 <Background />
                 <Routes>
                     <Route exact path="/" element={<Home />} />
@@ -39,7 +48,11 @@ function App() {
                         path="/contact-us"
                         element={<ContactUs />}
                     ></Route>
-                    <Route exact path="/login" element={<Login />}></Route>
+                    <Route
+                        exact
+                        path="/login"
+                        element={<Login onLogin={handleLogin} />}
+                    ></Route>
                 </Routes>
             </Router>
         </>

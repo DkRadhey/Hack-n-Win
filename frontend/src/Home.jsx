@@ -21,7 +21,7 @@ const Home = () => {
                     style={{
                         "text-decoration": "none",
                         border: "none",
-                        font: "400 18px Krona One",
+                        font: "400 18px Kronana One",
                     }}
                 >
                     <Venues />

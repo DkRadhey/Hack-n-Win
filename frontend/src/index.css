@@ -35,3 +35,7 @@ a {
 .disable-overflow {
     overflow-y: scroll;
 }
+
+.disable-overflow::-webkit-scrollbar {
+    display: none;
+}

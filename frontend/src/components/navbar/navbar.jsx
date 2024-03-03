@@ -3,7 +3,7 @@ import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png";
 
-const navbar = () => {
+const navbar = ({ isLoggedIn }) => {
     return (
         <div>
             <nav className="navbar navbar-expand-lg d-flex justify-content-between">
@@ -45,7 +45,7 @@ const navbar = () => {
                         </ul>
                         <span className="nav-item">
                             <NavLink className="login" to="/login">
-                                Login
+                                {isLoggedIn ? "Logout" : "Login"}
                             </NavLink>
                         </span>
                     </div>
