@@ -1,9 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import img from "../../assets/logo.png";
 import img2 from "../../assets/aboutImg2.jpg";
 import img3 from "../../assets/aboutImg3.jpg";
+import { useLocation } from "react-router-dom";
 
 const About = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+        // Disable overflow-y on "/about" route
+        if (location.pathname === "/about") {
+            document.body.classList.add("disable-overflow");
+        } else {
+            document.body.classList.remove("disable-overflow");
+        }
+
+        // Clean up effect on component unmount
+        return () => {
+            document.body.classList.remove("disable-overflow");
+        };
+    }, [location.pathname]);
+
     const headingStyle = {
         textAlign: "center",
         font: "400 40px Krona One",
